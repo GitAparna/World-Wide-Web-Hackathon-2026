@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Job Forecast - Montgomery Circular Tech</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "primary-dark": "#1D4ED8",
+                        "secondary": "#10B981",
+                        "circular-green": "#059669",
+                        "accent": "#8B5CF6",
+                        "background-dark": "#0F172A",
+                        "background-light": "#F8FAFC",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="bg-background-light dark:bg-background-dark font-display text-white antialiased min-h-screen">
+    <div class="flex flex-col min-h-screen">
+
+        <!-- Header -->
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b-4 border-primary-dark/20 px-6 md:px-10 py-5 bg-[#0A1128] border-b border-white/10 shadow-sm sticky top-0 z-50 shadow-sm">
+            <div class="flex items-center gap-3">
+                <a href="index.html"
+                    class="flex items-center justify-center p-2 rounded-lg border border-white/10 text-slate-300 hover:border-white/50 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all"
+                    title="Back to Portal">
+                    <span class="material-symbols-outlined text-xl">arrow_back</span>
+                </a>
+                <div class="flex items-center gap-3 cursor-pointer group" onclick="window.location.href='index.html'">
+                    <div class="flex items-center justify-center p-2 rounded-lg bg-white/20 text-white">
+                        <span class="material-symbols-outlined text-2xl">account_balance</span>
+                    </div>
+                    <h2
+                        class="text-lg font-bold leading-tight tracking-tight text-white group-hover:text-white transition-colors">
+                        Montgomery Circular Tech</h2>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="briefing.html"
+                    class="flex items-center justify-center p-2 rounded-lg border border-white/10 text-slate-300 hover:border-white/50 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all mr-2"
+                    title="Contact">
+                    <span class="material-symbols-outlined text-xl">mail</span>
+                </a>
+                <div class="bg-cover bg-center size-10 rounded-full border-2 border-white cursor-pointer hover:shadow-[0_0_12px_rgba(255,255,255,0.35)] transition-all"
+                    data-alt="User profile avatar" onclick="window.location.href='user-profile.html'"
+                    style="background-image: url('avatar.png');"></div>
+            </div>
+        </header>
+
+        <div class="flex flex-1 overflow-hidden">
+
+            <aside id="app-sidebar"
+                class="hidden lg:flex w-64 flex-col border-r border-white/10 bg-[#0A1128] text-white px-4 py-6 gap-6  overflow-y-auto shadow-sm">
+                <div class="pb-3 border-b border-white/10">
+                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Navigation</p>
+                </div>
+                <nav class="flex flex-col gap-1">
+                    <a href="data-flows.html"
+                        class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#0A1128]/20 hover:text-white transition-all text-slate-300 font-semibold group">
+                        <span
+                            class="material-symbols-outlined text-xl text-slate-400 group-hover:text-white transition-colors">dashboard</span>
+                        <span class="text-sm">E-Waste Data Flows</span>
+                    </a>
+                    <a href="job-forecast.html"
+                        class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#0A1128]/20 hover:text-white transition-all text-slate-300 font-semibold group">
+                        <span
+                            class="material-symbols-outlined text-xl text-slate-400 group-hover:text-white transition-colors">trending_up</span>
+                        <span class="text-sm">Job Forecast</span>
+                    </a>
+                    <a href="zone-development.html"
+                        class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#0A1128]/20 hover:text-white transition-all text-slate-300 font-semibold group">
+                        <span
+                            class="material-symbols-outlined text-xl text-slate-400 group-hover:text-white transition-colors">architecture</span>
+                        <span class="text-sm">Zone Development</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <div class="flex-1 flex flex-col overflow-y-auto">
+
+                <main
+                    class="flex-1 overflow-x-hidden p-6 md:p-10 w-full mx-auto space-y-10 bg-slate-900">
+                    <!-- Header Section -->
+
+
+                    <header class="mb-10">
+                        <h2 class="text-3xl font-black tracking-tight text-white font-bold">Job Forecast</h2>
+                        <p class="text-slate-500 dark:text-slate-400 mt-1">Projected employment growth across circular
+                            economy
+                            sectors in Montgomery.</p>
+                    </header>
+                    <!-- Metrics Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-[#0A1128] p-6 rounded-xl border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:border-white/70 transition-all">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="p-2 bg-white/10 rounded-lg text-slate-300">
+                                    <span class="material-symbols-outlined">restore_from_trash</span>
+                                </div>
+                                <span class="text-xs font-bold text-slate-300 px-2 py-1 bg-white/10 rounded-full">+15%
+                                    vs
+                                    LY</span>
+                            </div>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Recycling &amp; Recovery
+                                Jobs</p>
+                            <p class="text-3xl font-bold mt-1">120</p>
+                            <div class="mt-4 w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-white h-full w-[80%]"></div>
+                            </div>
+                            <p class="text-[11px] text-slate-400 mt-2">Target: 150 positions</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-[#0A1128] p-6 rounded-xl border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:border-white/70 transition-all">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="p-2 bg-white/10 rounded-lg text-slate-300">
+                                    <span class="material-symbols-outlined">build</span>
+                                </div>
+                                <span class="text-xs font-bold text-slate-300 px-2 py-1 bg-white/10 rounded-full">+10%
+                                    vs
+                                    LY</span>
+                            </div>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Refurbishment Jobs</p>
+                            <p class="text-3xl font-bold mt-1">80</p>
+                            <div class="mt-4 w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-white h-full w-[65%]"></div>
+                            </div>
+                            <p class="text-[11px] text-slate-400 mt-2">Target: 120 positions</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-[#0A1128] p-6 rounded-xl border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:border-white/70 transition-all">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="p-2 bg-white/10 rounded-lg text-slate-300">
+                                    <span class="material-symbols-outlined">ac_unit</span>
+                                </div>
+                                <span class="text-xs font-bold text-slate-300 px-2 py-1 bg-white/10 rounded-full">+8% vs
+                                    LY</span>
+                            </div>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Cooling Tech Jobs</p>
+                            <p class="text-3xl font-bold mt-1">60</p>
+                            <div class="mt-4 w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-white h-full w-[50%]"></div>
+                            </div>
+                            <p class="text-[11px] text-slate-400 mt-2">Target: 100 positions</p>
+                        </div>
+                    </div>
+                    <!-- Projection Chart Section -->
+                    <div
+                        class="bg-[#0A1128] text-white p-8 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Five-Year Job Projection</h3>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="text-3xl font-black text-white font-bold">260 Total Jobs</span>
+                                    <span
+                                        class="text-sm font-bold text-green-400 bg-green-400/10 px-2 py-0.5 rounded">+22%
+                                        Net
+                                        Growth</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mt-1">Projected aggregate workforce expansion (2024 -
+                                    2029)</p>
+                            </div>
+                        </div>
+                        <!-- Line Chart Visualization -->
+                        <div class="relative h-[300px] w-full">
+                            <svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1000 300"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0%" stop-color="#4dea3e" stop-opacity="0.2"></stop>
+                                        <stop offset="100%" stop-color="#4dea3e" stop-opacity="0"></stop>
+                                    </lineargradient>
+                                </defs>
+                                <!-- Grid Lines -->
+                                <line class="text-slate-100 dark:text-slate-800" stroke="currentColor" stroke-width="1"
+                                    x1="0" x2="1000" y1="50" y2="50"></line>
+                                <line class="text-slate-100 dark:text-slate-800" stroke="currentColor" stroke-width="1"
+                                    x1="0" x2="1000" y1="125" y2="125"></line>
+                                <line class="text-slate-100 dark:text-slate-800" stroke="currentColor" stroke-width="1"
+                                    x1="0" x2="1000" y1="200" y2="200"></line>
+                                <line class="text-slate-100 dark:text-slate-800" stroke="currentColor" stroke-width="1"
+                                    x1="0" x2="1000" y1="275" y2="275"></line>
+                                <!-- Area Fill -->
+                                <path d="M0,250 L200,220 L400,180 L600,140 L800,80 L1000,40 V300 H0 Z"
+                                    fill="url(#chartGradient)"></path>
+                                <!-- Data Line -->
+                                <path d="M0,250 L200,220 L400,180 L600,140 L800,80 L1000,40" fill="none"
+                                    stroke="#4dea3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                                </path>
+                                <!-- Points -->
+                                <circle cx="0" cy="250" fill="#4dea3e" r="5"></circle>
+                                <circle cx="200" cy="220" fill="#4dea3e" r="5"></circle>
+                                <circle cx="400" cy="180" fill="#4dea3e" r="5"></circle>
+                                <circle cx="600" cy="140" fill="#4dea3e" r="5"></circle>
+                                <circle cx="800" cy="80" fill="#4dea3e" r="5"></circle>
+                                <circle cx="1000" cy="40" fill="#4dea3e" r="5"></circle>
+                            </svg>
+                            <!-- X-Axis Labels -->
+                            <div class="flex justify-between mt-4">
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">2024</span>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">2025</span>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">2026</span>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">2027</span>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">2028</span>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">2029</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Detailed Breakdown Table -->
+                    <div class="mt-10">
+                        <h3 class="text-lg font-bold mb-4">Detailed Sector Growth</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-white/10">
+                                        <th class="pb-4 font-semibold text-slate-500 text-sm">Sector Name</th>
+                                        <th class="pb-4 font-semibold text-slate-500 text-sm">2024 Base</th>
+                                        <th class="pb-4 font-semibold text-slate-500 text-sm">Growth Rate</th>
+                                        <th class="pb-4 font-semibold text-slate-500 text-sm">2029 Projected</th>
+                                        <th class="pb-4 font-semibold text-slate-500 text-sm">Confidence</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                    <tr>
+                                        <td class="py-4 font-medium">Recycling &amp; Recovery</td>
+                                        <td class="py-4">120</td>
+                                        <td class="py-4 text-white font-bold">+15.2%</td>
+                                        <td class="py-4">198</td>
+                                        <td class="py-4">
+                                            <span
+                                                class="px-2 py-0.5 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded text-xs font-medium">High</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 font-medium">Refurbishment &amp; Repair</td>
+                                        <td class="py-4">80</td>
+                                        <td class="py-4 text-white font-bold">+10.8%</td>
+                                        <td class="py-4">122</td>
+                                        <td class="py-4">
+                                            <span
+                                                class="px-2 py-0.5 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded text-xs font-medium">High</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 font-medium">Sustainable Cooling</td>
+                                        <td class="py-4">60</td>
+                                        <td class="py-4 text-white font-bold">+8.4%</td>
+                                        <td class="py-4">92</td>
+                                        <td class="py-4">
+                                            <span
+                                                class="px-2 py-0.5 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 rounded text-xs font-medium">Moderate</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2563EB",
+            "primary-dark": "#1D4ED8",
+            "secondary": "#10B981",
+            "circular-green": "#059669",
+            "accent": "#8B5CF6",
+            "background-dark": "#0F172A",
+            "background-light": "#F8FAFC",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "body": ["Inter", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <title>E-Waste Data Flows | Montgomery Circular Tech</title>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .official-seal-bg {
+      background-image: radial-gradient(circle at 10% 20%, rgba(23, 84, 207, 0.05) 0%, transparent 40%);
+    }
+  </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="bg-slate-900 dark:bg-slate-900  font-display text-white antialiased min-h-screen">
+  <div class="flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between whitespace-nowrap border-b-4 border-[#0A1128]-dark/20 px-6 md:px-10 py-5 bg-[#0A1128] border-b border-white/10 shadow-sm sticky top-0 z-50 shadow-sm">
+      <div class="flex items-center gap-3">
+        <a href="index.html"
+          class="flex items-center justify-center p-2 rounded-lg border border-white/10 text-slate-300 hover:border-white/50 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all"
+          title="Back to Portal">
+          <span class="material-symbols-outlined text-xl">arrow_back</span>
+        </a>
+        <div class="flex items-center gap-3 cursor-pointer group" onclick="window.location.href='index.html'">
+          <div class="flex items-center justify-center p-2 rounded-lg bg-white/20 text-white">
+            <span class="material-symbols-outlined text-2xl">account_balance</span>
+          </div>
+          <h2
+            class="text-lg font-bold leading-tight tracking-tight text-white group-hover:text-slate-300 transition-colors">
+            Montgomery Circular Tech</h2>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div
+          class="bg-cover bg-center size-10 rounded-full border-2 border-white cursor-pointer hover:shadow-[0_0_12px_rgba(255,255,255,0.35)] transition-all"
+          data-alt="User profile avatar" onclick="window.location.href='user-profile.html'"
+          style="background-image: url('avatar.png');"></div>
+      </div>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+
+      <aside id="app-sidebar"
+        class="hidden lg:flex w-64 flex-col border-r border-white/10 bg-[#0A1128] text-white px-4 py-6 gap-6  overflow-y-auto shadow-sm">
+        <div class="pb-3 border-b border-white/10">
+          <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Navigation</p>
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a href="data-flows.html"
+            class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#0A1128]/20 hover:text-white transition-all text-slate-300 font-semibold group">
+            <span
+              class="material-symbols-outlined text-xl text-slate-400 group-hover:text-white transition-colors">dashboard</span>
+            <span class="text-sm">E-Waste Data Flows</span>
+          </a>
+          <a href="job-forecast.html"
+            class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#0A1128]/20 hover:text-white transition-all text-slate-300 font-semibold group">
+            <span
+              class="material-symbols-outlined text-xl text-slate-400 group-hover:text-white transition-colors">trending_up</span>
+            <span class="text-sm">Job Forecast</span>
+          </a>
+          <a href="zone-development.html"
+            class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#0A1128]/20 hover:text-white transition-all text-slate-300 font-semibold group">
+            <span
+              class="material-symbols-outlined text-xl text-slate-400 group-hover:text-white transition-colors">architecture</span>
+            <span class="text-sm">Zone Development</span>
+          </a>
+        </nav>
+      </aside>
+
+      <div class="flex-1 flex flex-col overflow-y-auto">
+
+        <main
+          class="flex-1 overflow-x-hidden p-6 md:p-10 w-full mx-auto space-y-10 bg-slate-900 dark:bg-slate-900 dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] dark:from-slate-800 dark:to-slate-950">
+
+
+
+
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-4">
+            <div>
+              <h1
+                class="text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-primary to-accent dark:from-white dark:via-blue-200 dark:to-purple-200 tracking-tight">
+                Request a Briefing
+              </h1>
+              <p class="text-slate-500 dark:text-slate-400 mt-1">Connect with our team to explore circular tech
+                solutions
+                and upcoming events.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="bg-[#0A1128] text-white border-[#0A1128]-dark/80 p-8 rounded-xl border border-[#0A1128]/10 shadow-sm">
+              <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined text-white">mail</span>
+                Contact Our Team
+              </h2>
+              <form class="space-y-4">
+                <div>
+                  <label class="block text-sm font-bold text-slate-300 dark:text-slate-300 mb-1">Full Name</label>
+                  <input type="text" placeholder="Jane Doe"
+                    class="w-full bg-slate-900 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-2 text-white" />
+                </div>
+                <div>
+                  <label class="block text-sm font-bold text-slate-300 dark:text-slate-300 mb-1">Email / Work
+                    Contact</label>
+                  <input type="email" placeholder="jane@enterprise.com"
+                    class="w-full bg-slate-900 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-2 text-white" />
+                </div>
+                <div>
+                  <label class="block text-sm font-bold text-slate-300 dark:text-slate-300 mb-1">Briefing Topic</label>
+                  <select
+                    class="w-full bg-slate-900 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-2 text-white">
+                    <option>Enterprise Hardware Recycling</option>
+                    <option>Job Creation Initiatives</option>
+                    <option>Municipal Land Remediation</option>
+                    <option>Circular Strategy Consultation</option>
+                  </select>
+                </div>
+                <div class="pt-2">
+                  <button type="button" onclick="window.location.href='index.html'"
+                    class="w-full bg-[#0A1128] hover:brightness-110 text-white dark:text-white font-bold px-6 py-3 rounded-lg transition-all shadow-lg shadow-primary/20">
+                    Submit Request
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="space-y-6">
+              <div
+                class="bg-[#0A1128] text-white border-[#0A1128]-dark/80 p-8 rounded-xl border border-[#0A1128]/10 shadow-sm relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+                <div class="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    <span
+                      class="px-2 py-1 bg-[#0A1128] text-white text-[10px] font-black uppercase rounded mb-4 inline-block">Upcoming
+                      Event</span>
+                    <h3 class="text-xl font-bold mb-2">Montgomery Circular Tech Convention 2026</h3>
+                    <p class="text-sm text-slate-500 mb-4 line-clamp-3">Join government officials, hardware recyclers,
+                      and
+                      enterprise data centers for a hands-on event showcasing Alabama's green economy transition.</p>
+                  </div>
+                  <div class="flex items-center justify-between mt-4 pt-4 border-t border-white/10">
+                    <div class="flex items-center gap-2 text-white font-bold text-sm">
+                      <span class="material-symbols-outlined text-lg">calendar_month</span> Oct 15-17
+                    </div>
+                    <button onclick="alert('Registration opening soon for the October 2026 Convention!')"
+                      class="bg-white text-[#0A1128] hover:bg-slate-200 px-4 py-2 rounded-lg text-sm font-bold transition-colors flex items-center gap-2 shadow-sm">
+                      <span class="material-symbols-outlined text-lg">edit_calendar</span> RSVP
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-[#0A1128] text-white p-5 rounded-xl border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:border-white/70 transition-all overflow-hidden">
+                <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-red-500">play_circle</span>
+                  The E-Waste Recycling Process
+                </h4>
+                <div class="relative w-full aspect-video rounded-lg overflow-hidden">
+                  <iframe src="https://www.youtube-nocookie.com/embed/P_37QPh0ZUA" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    class="absolute top-0 left-0 w-full h-full"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

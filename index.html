@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Montgomery Circular Tech | Official E-Waste Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "primary-dark": "#1D4ED8",
+                        "secondary": "#10B981",
+                        "circular-green": "#059669",
+                        "accent": "#8B5CF6",
+                        "background-dark": "#0F172A",
+                        "background-light": "#F8FAFC",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .official-seal-bg {
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-[#0A1128] font-display text-white transition-colors duration-300">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden overflow-y-auto official-seal-bg">
+        <!-- Navigation -->
+        <nav
+            class="flex items-center bg-[#0A1128] p-4 border-b border-[#0A1128]/10 justify-between sticky top-0 z-50 shadow-sm">
+            <div class="flex items-center gap-3 cursor-pointer group" onclick="window.location.href='index.html'">
+                <div class="flex items-center justify-center p-2 rounded-lg bg-white/20 text-white shrink-0">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </div>
+                <h2
+                    class="text-white text-lg font-bold leading-tight tracking-tight flex-1 ml-3 group-hover:text-slate-300 transition-colors">
+                    Montgomery Circular Tech</h2>
+            </div>
+            <div class="flex items-center justify-end gap-4">
+                <a href="briefing.html"
+                    class="flex items-center justify-center p-2 rounded-lg border border-white/10 text-slate-300 hover:border-white/50 hover:text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all mr-2"
+                    title="Contact">
+                    <span class="material-symbols-outlined text-xl">mail</span>
+                </a>
+                <div class="bg-cover bg-center size-10 rounded-full border-2 border-white cursor-pointer hover:shadow-[0_0_12px_rgba(255,255,255,0.35)] transition-all"
+                    data-alt="User profile avatar" onclick="window.location.href='user-profile.html'"
+                    style="background-image: url('avatar.png');"></div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="w-full @container z-10">
+            <div
+                class="flex flex-col gap-6 px-4 py-10 @[864px]:py-20 @[480px]:gap-8 @[864px]:flex-row max-w-7xl mx-auto">
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl shadow-xl border border-[#0A1128]/20 @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-1/2 bg-[#0A1128]"
+                    data-alt="Sustainable recycling facility Aerial view" style="background-image: url('hero.png');">
+                </div>
+                <div
+                    class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:w-1/2 @[864px]:justify-center">
+                    <div class="flex flex-col gap-4 text-left">
+                        <a href="annual-report.html"
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-white/10 text-white uppercase tracking-wider w-fit border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] cursor-pointer hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:bg-white/20 hover:border-white/40 transition-all group">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                            </span>
+                            Now Live: Annual Report
+                            <span
+                                class="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                        </a>
+                        <h1 class="text-white text-4xl font-black leading-tight tracking-tight @[480px]:text-6xl">
+                            Montgomery Circular Tech Dashboard
+                        </h1>
+                        <h2
+                            class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed @[480px]:text-xl">
+                            A data-driven pathway to jobs, sustainability, and circular-economy innovation in the heart
+                            of our community.
+                        </h2>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="window.location.href='data-flows.html'"
+                            class="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-14 px-8 bg-[#0A1128] border border-white/30 hover:border-white/40 text-white text-base font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+                            <span>Explore Dashboard</span>
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section (Analytics Highlight) -->
+        <div
+            class="bg-[#0A1128]/5 dark:bg-[#0A1128]/5 py-12 relative z-10 border-y border-[#0A1128]/10 w-full rounded-3xl backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="flex flex-col gap-2 rounded-2xl p-8 bg-[#0A1128] border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] shadow-sm transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:border-white/70 group">
+                        <div
+                            class="text-slate-400 mb-2 bg-[#0A1128]/10 w-16 h-16 flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-4xl">recycling</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest mt-2">
+                            Estimated Annual E-Waste</p>
+                        <p class="text-white tracking-tight text-3xl font-black leading-tight">
+                            1,500–5,000 <span class="text-lg font-normal opacity-70">tons</span></p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-2 rounded-2xl p-8 bg-[#0A1128] border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] shadow-sm transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:border-white/70 group">
+                        <div
+                            class="text-slate-400 mb-2 bg-[#0A1128]/10 w-16 h-16 flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-4xl">work</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest mt-2">
+                            Projected Jobs Created</p>
+                        <p class="text-white tracking-tight text-3xl font-black leading-tight">
+                            100–300+</p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-2 rounded-2xl p-8 bg-[#0A1128] border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] shadow-sm transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:border-white/70 group">
+                        <div
+                            class="text-slate-400 mb-2 bg-[#0A1128]/10 w-16 h-16 flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-4xl">map</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest mt-2">
+                            Abandoned Land Repurposed</p>
+                        <p class="text-white tracking-tight text-3xl font-black leading-tight">TBD
+                            <span class="text-lg font-normal opacity-70">Acres</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategic Impact Section -->
+        <div class="flex flex-col gap-10 px-4 py-16 w-full @container max-w-7xl mx-auto z-10">
+            <div class="flex flex-col gap-4 text-center items-center">
+                <h2 class="text-white tracking-tight text-3xl font-black leading-tight @[480px]:text-4xl">
+                    Our Strategic Impact
+                </h2>
+                <div class="h-1.5 w-24 bg-[#0A1128] rounded-full shadow-lg shadow-primary/40"></div>
+                <p class="text-slate-600 dark:text-slate-400 text-lg font-medium leading-normal max-w-[720px]">
+                    Driving innovation through sustainable waste management and meaningful local job creation.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="flex flex-col gap-4 rounded-2xl border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] bg-[#0A1128]/80 p-8 shadow-sm hover:border-[#0A1128]/40 transition-colors backdrop-blur-sm">
+                    <div class="text-slate-400 bg-[#0A1128]/10 w-14 h-14 rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">nature_people</span>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-2">
+                        <h3 class="text-white text-xl font-bold leading-tight">Sustainability</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-relaxed">
+                            Reducing environmental footprint through efficient, state-of-the-art e-waste processing and
+                            material recovery.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col gap-4 rounded-2xl border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] bg-[#0A1128]/80 p-8 shadow-sm hover:border-[#0A1128]/40 transition-colors backdrop-blur-sm">
+                    <div class="text-slate-400 bg-[#0A1128]/10 w-14 h-14 rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">trending_up</span>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-2">
+                        <h3 class="text-white text-xl font-bold leading-tight">Economic Growth</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-relaxed">
+                            Creating high-quality green jobs for the local workforce, fostering a new specialized tech
+                            industry in Montgomery.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col gap-4 rounded-2xl border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.15)] bg-[#0A1128]/80 p-8 shadow-sm hover:border-[#0A1128]/40 transition-colors backdrop-blur-sm">
+                    <div class="text-slate-400 bg-[#0A1128]/10 w-14 h-14 rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">location_city</span>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-2">
+                        <h3 class="text-white text-xl font-bold leading-tight">Community
+                            Revitalization</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-relaxed">
+                            Transforming underutilized land and former industrial sites into productive circular economy
+                            innovation hubs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-[#0A1128] border-t border-slate-200 dark:border-slate-800 py-12 px-4 z-10 mt-auto">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <div
+                    class="text-slate-400 dark:text-slate-600 text-xs font-semibold uppercase tracking-widest text-center md:text-left">
+                    © 2026 Montgomery Circular Tech Initiative. All rights reserved.
+                </div>
+                <div class="flex flex-wrap justify-center gap-8 text-sm font-bold text-slate-500 dark:text-slate-400">
+                    <a class="hover:text-slate-400 transition-colors" href="privacy.html">Privacy Policy</a>
+                    <a class="hover:text-slate-400 transition-colors" href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
