@@ -42,13 +42,12 @@ Open in your browser:
 
   eg: http://localhost:8080/  
   
-  Hints: Adjust to the right port number if needed.
-  Hints: Adjust your environment variable to connect to Bright Data Apis
+  Hints: Adjust to the right port number if needed & Adjust your environment variable to connect to Bright Data Apis.
 
 
 **Author**
 
 Aparna Narayanaswamy
-Product Manager | Hackathon Participant
+Hackathon Participant
 
 GitHub: https://github.com/GitAparna   
