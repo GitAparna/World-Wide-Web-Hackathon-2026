@@ -387,42 +387,11 @@
               <h3 class="text-xl font-bold text-slate-900 dark:text-white">Live Regional Recovery Hubs</h3>
               <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 mt-1">Real-time geospatial data for e-waste
                 sites across Montgomery.</p>
-              <div class="flex flex-col gap-4 overflow-y-auto max-h-64 pr-2 text-sm">
-                <!-- Data fetched via Brightdata -->
-                <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-green-600 mt-0.5">location_on</span>
-                  <div>
-                    <p class="font-bold text-slate-900 dark:text-white">SA Recycling Montgomery</p>
-                    <p class="text-slate-500">460 Air Base Blvd, AL 36108</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-green-600 mt-0.5">location_on</span>
-                  <div>
-                    <p class="font-bold text-slate-900 dark:text-white">Waste Management</p>
-                    <p class="text-slate-500">2810 Day St, AL 36108</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-green-600 mt-0.5">location_on</span>
-                  <div>
-                    <p class="font-bold text-slate-900 dark:text-white">Mount Scrap Material Co.</p>
-                    <p class="text-slate-500">824 N Decatur St, AL 36104</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-green-600 mt-0.5">location_on</span>
-                  <div>
-                    <p class="font-bold text-slate-900 dark:text-white">Best Buy E-Waste Drop-off</p>
-                    <p class="text-slate-500">7701 Eastchase Pkwy, AL</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-green-600 mt-0.5">location_on</span>
-                  <div>
-                    <p class="font-bold text-slate-900 dark:text-white">EcoATM Kiosk</p>
-                    <p class="text-slate-500">6980 Mobile Hwy, AL 36105</p>
-                  </div>
+              <div id="live-hubs-container" class="flex flex-col gap-4 overflow-y-auto max-h-64 pr-2 text-sm">
+                <!-- Data fetched from backend via Brightdata -->
+                <div class="flex items-center justify-center p-8 space-x-2">
+                  <span class="material-symbols-outlined animate-spin text-green-600">sync</span>
+                  <p class="text-slate-500 font-medium">Fetching live BrightData feeds...</p>
                 </div>
               </div>
             </div>
@@ -434,6 +403,47 @@
 </body>
 
 <script>
+  // Add backend live fetch
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('http://localhost:3000/api/recycling-centers')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('live-hubs-container');
+        if (data.success && data.centers) {
+          container.innerHTML = '';
+          data.centers.forEach(center => {
+            container.innerHTML += `
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-green-600 mt-0.5">location_on</span>
+                <div>
+                  <p class="font-bold text-slate-900 dark:text-white">${center.name}</p>
+                  <p class="text-slate-500">${center.address}</p>
+                </div>
+              </div>
+            `;
+          });
+        } else {
+          container.innerHTML = `
+            <div class="p-4 text-red-500 text-center">
+              <span class="material-symbols-outlined mb-2 text-2xl">error</span>
+              <p>Failed to connect to BrightData proxy backend.</p>
+              <p class="text-sm mt-1 opacity-80">${data.error || 'Check server logs for details.'}</p>
+            </div>
+          `;
+        }
+      })
+      .catch(err => {
+        console.error('Failed to load BrightData feed:', err);
+        document.getElementById('live-hubs-container').innerHTML = `
+          <div class="p-4 text-red-500 text-center">
+            <span class="material-symbols-outlined mb-2 text-2xl">error</span>
+            <p>Failed to connect to backend.</p>
+            <p class="text-sm mt-1 opacity-80">Make sure server.js is running.</p>
+          </div>
+        `;
+      });
+  });
+
   function exportToCSV() {
     const data = [
       ["Metric", "Value"],

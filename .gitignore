@@ -1,6 +1,4 @@
 node_modules/
 .DS_Store
-*.py
-*.js
-!script.js
-!app.js
+.env
+package-lock.json
